@@ -26,6 +26,7 @@ public class Order {
     private Member member;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    // cascade 옵션은 영속성 전이. 엔티티에 상태변화가 생기면 연관된 엔티티의 상태도 변화시켜줌
     private List<OrderItem> orderItems = new ArrayList<>(); // 실제로 필요?
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)    // 1:1 관계의 외래 키는 더 많이 쓰는 쪽에
