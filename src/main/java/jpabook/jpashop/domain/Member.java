@@ -12,7 +12,7 @@ import java.util.List;
 public class Member {
 
     @Id @GeneratedValue
-    @Column(name = "member_id") // 굳이 컬럼 이유?
+    @Column(name = "member_id") // 구분하기 편하고 일관성을 위해.
     private Long id;
 
     private String name;
